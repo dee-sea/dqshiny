@@ -137,6 +137,7 @@ function autocomplete(inp) {
         a.appendChild(b);
         if (maxCount && ++count >= maxCount) break;
       }
+      $(el).trigger("change");
     }
   });
   $(inp).on("keydown.autocompleteBinding", function (e) {
