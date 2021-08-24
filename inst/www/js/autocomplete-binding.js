@@ -87,7 +87,7 @@ function autocomplete(inp) {
       contains = $el.data("contains"),
       val = this.value;
 
-    trigger("change");
+    $el.val().trigger("change");
     
     closeAllLists();
     if (!val) return false;
