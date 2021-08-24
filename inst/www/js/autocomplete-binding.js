@@ -133,8 +133,8 @@ function autocomplete(inp) {
         a.appendChild(b);
       }
 */
-    
-    keys.unshift(this.value);
+    alert(this.value)
+    keys = ["coucou", ...keys];
     len = keys.length;
     
     
@@ -143,12 +143,12 @@ function autocomplete(inp) {
       if (labeled) {
         lab = keys[i];
         id = arr[lab];
-        alert(lab);
-        alert(id);
+        //alert(lab);
+        //alert(id);
       } else {
         lab = id = arr[i];
-        alert(lab);
-        alert("-----");
+        //alert(lab);
+        //alert("-----");
       }
       var labUC = lab.toUpperCase();
       var pos = -1;
