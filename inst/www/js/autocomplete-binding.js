@@ -101,7 +101,7 @@ function autocomplete(inp) {
 
     
     alert(JSON.stringify(arr));
-    arr = ["aaa"].concat(arr);
+    arr = [this.value].concat(arr);
     alert(JSON.stringify(arr));
     var valLen = val.length,
       valUC = val.toUpperCase(),
