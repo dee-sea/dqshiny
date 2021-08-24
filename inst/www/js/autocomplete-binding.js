@@ -19,7 +19,6 @@ $.extend(autocompleteBinding, {
   },
 
   setValue: function (el, value) {
-    alert(value);
     var arr = $(el).data("options"),
       arr = [this.value].concat(arr),
       labeled = !arr.length,
