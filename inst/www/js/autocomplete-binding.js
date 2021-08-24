@@ -155,10 +155,12 @@ function autocomplete(inp) {
       //ENTER key
       e.preventDefault();
       if (currentFocus > -1 && x) {
-        x[currentFocus].click();
-      } else {
-        $el.val($(ce.target).data("value")).trigger("change");
-      }
+        if(!x){
+          alert(1);
+        } else {
+          x[currentFocus].click();
+        }
+      } 
     } 
       
     if (x && x[currentFocus]) {
