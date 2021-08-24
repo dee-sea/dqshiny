@@ -172,7 +172,7 @@ function autocomplete(inp) {
       }
     }
   });
-  $(inp).on("keydown.autocompleteBinding", function (e) {
+/*  $(inp).on("keydown.autocompleteBinding", function (e) {
     var x,
       parent = document.getElementById(this.id + "autocomplete-list");
     if (parent) x = parent.getElementsByTagName("div");
@@ -195,7 +195,7 @@ function autocomplete(inp) {
       e.preventDefault();
       if (currentFocus > -1 && x) {
         x[currentFocus].click();
-      } 
+      } */
     }
     if (x && x[currentFocus]) {
       var xot = x[currentFocus].offsetTop,
