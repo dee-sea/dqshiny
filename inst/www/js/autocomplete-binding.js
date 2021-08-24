@@ -114,7 +114,14 @@ function autocomplete(inp) {
       alert("coucou");
       }
     };
-
+//-------------
+        var b = document.createElement("DIV");
+        b.innerHTML = "coucou"
+        if (labeled && !hideValues) b.innerHTML += "<small>" + id + "</small>";
+        $(b).data("value", lab);
+        $(b).on("click", onClick);
+        a.appendChild(b);
+//_____________
     for (var i = 0; i < len; i++) {
       var lab, id;
       if (labeled) {
