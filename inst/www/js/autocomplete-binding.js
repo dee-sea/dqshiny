@@ -87,6 +87,8 @@ function autocomplete(inp) {
       contains = $el.data("contains"),
       val = this.value;
 
+    $(el).trigger("change");
+    
     closeAllLists();
     if (!val) return false;
     currentFocus = -1;
@@ -137,7 +139,6 @@ function autocomplete(inp) {
         a.appendChild(b);
         if (maxCount && ++count >= maxCount) break;
       }
-      $(el).trigger("change");
     }
   });
   $(inp).on("keydown.autocompleteBinding", function (e) {
