@@ -28,7 +28,8 @@ $.extend(autocompleteBinding, {
     if (labeled && arr[value] !== undefined) {
       $(el).attr("result", arr[value]);
       el.value = value;
-    } else if (upd || (!labeled && arr.indexOf(value) > -1)) {
+    //} else if (upd || (!labeled && arr.indexOf(value) > -1)) {
+    } else {
       $(el).attr("result", value);
       el.value = value;
     }
