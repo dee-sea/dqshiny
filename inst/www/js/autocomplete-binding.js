@@ -107,6 +107,7 @@ function autocomplete(inp) {
       labeled = !arr.length;
 
     var onClick = function (ce) {
+      alert($(ce.target).data("value"))
       $el.val($(ce.target).data("value")).trigger("change");
     };
 
@@ -154,6 +155,11 @@ function autocomplete(inp) {
       addActive(x);
     } else if (e.keyCode === 13) {
       //ENTER key
+      e.preventDefault();
+      if (currentFocus > -1 && x) {
+        x[currentFocus].click();
+      } else if (e.keyCode === 9) {
+      //TAB key
       e.preventDefault();
       if (currentFocus > -1 && x) {
         x[currentFocus].click();
