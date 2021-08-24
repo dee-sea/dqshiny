@@ -221,9 +221,9 @@ function autocomplete(inp) {
 }
 
 function setData(obj, field, el) {
-  print(JSON.stringify(obj);
-  print(JSON.stringify(field);
-  print(JSON.stringify(el);
+  print(JSON.stringify(obj));
+  print(JSON.stringify(field));
+  print(JSON.stringify(el));
   if (obj.hasOwnProperty(field)) $(el).data(field, obj[field]);
 }
 
