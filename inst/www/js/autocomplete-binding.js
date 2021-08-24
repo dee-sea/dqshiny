@@ -108,12 +108,7 @@ function autocomplete(inp) {
 
     var onClick = function (ce) {
       alert($(ce.target).data("value"));
-      if ($(ce.target).data("value")) {
-        $el.val($(ce.target).data("value")).trigger("change");
-      } else {
-        $(ce.target).data("value") = "Coucou";
-        $el.val($(ce.target).data("value")).trigger("change");
-      }
+      $el.val($(ce.target).data("value")).trigger("change");
     };
 //-------------
       var lab, id;
