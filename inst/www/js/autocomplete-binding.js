@@ -120,10 +120,10 @@ function autocomplete(inp) {
       alert(keys[1]);
       var lab, id;
       if (labeled) {
-        lab = keys[i];
+        lab = "coucou";
         id = arr[lab];
       } else {
-        lab = id = arr[i];
+        lab = id = "coucou";
       }
       var labUC = lab.toUpperCase();
       var pos = -1;
@@ -142,7 +142,6 @@ function autocomplete(inp) {
         $(b).data("value", lab);
         $(b).on("click", onClick);
         a.appendChild(b);
-        if (maxCount && ++count >= maxCount) break;
       }
 //_____________
     for (var i = 0; i < len; i++) {
