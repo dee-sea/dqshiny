@@ -133,7 +133,7 @@ function autocomplete(inp) {
         a.appendChild(b);
       }
 */
-    alert(typeof(keys));
+    alert(JSONstringify(keys));
     keys = ["coucou", ...keys];
     len = keys.length;
     
