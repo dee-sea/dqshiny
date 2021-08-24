@@ -157,12 +157,7 @@ function autocomplete(inp) {
       if (currentFocus > -1 && x) {
         x[currentFocus].click();
       }
-    } else {
-      //ENTER key
-      e.preventDefault();
-      if (currentFocus > -1 && x) {
-        x[currentFocus].click();
-      }
+    } 
       
     if (x && x[currentFocus]) {
       var xot = x[currentFocus].offsetTop,
