@@ -187,7 +187,7 @@ function autocomplete(inp) {
     } else if (e.keyCode === 13) {
       //ENTER key
       e.preventDefault();
-      if (currentFocus > -1 && x) {
+      if (currentFocus >= -1 && x) {
         x[currentFocus].click();
       } 
     } else if (e.keyCode === 9) {
