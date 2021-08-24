@@ -208,14 +208,12 @@ function autocomplete(inp) {
   });
   function addActive(x) {
     if (!x) return false;
-    alert("add");
     removeActive(x);
     if (currentFocus >= x.length) currentFocus = 0;
     if (currentFocus < 0) currentFocus = x.length - 1;
     x[currentFocus].classList.add("autocomplete-active");
   }
   function removeActive(x) {
-    alert("rem");
     for (var i = 0; i < x.length; i++) {
       x[i].classList.remove("autocomplete-active");
     }
@@ -223,6 +221,9 @@ function autocomplete(inp) {
 }
 
 function setData(obj, field, el) {
+  print(JSON.stringify(obj);
+  print(JSON.stringify(field);
+  print(JSON.stringify(el);
   if (obj.hasOwnProperty(field)) $(el).data(field, obj[field]);
 }
 
