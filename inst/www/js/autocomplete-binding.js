@@ -14,12 +14,12 @@ $.extend(autocompleteBinding, {
   },
 
   getValue: function (el) {
-    alert($(el).attr("result"));
     if (el) return $(el).attr("result");
     return "";
   },
 
   setValue: function (el, value) {
+    alert(value);
     var arr = $(el).data("options"),
       arr = [this.value].concat(arr),
       labeled = !arr.length,
