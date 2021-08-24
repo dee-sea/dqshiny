@@ -134,7 +134,7 @@ function autocomplete(inp) {
       }
 */
     alert(JSONstringify(keys));
-    keys = ["aaa"], ...keys];
+    keys = ["aaa"].concat(keys);
         alert(JSONstringify(keys));
     len = keys.length;
     
