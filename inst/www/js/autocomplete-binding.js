@@ -107,7 +107,7 @@ function autocomplete(inp) {
       labeled = !arr.length;
 
     var onClick = function (ce) {
-      alert($(ce.target).data("value"));
+      alert($el.val($(ce.target).data("value")));
       $el.val($(ce.target).data("value")).trigger("change");
     };
 
@@ -155,7 +155,6 @@ function autocomplete(inp) {
     } else if (e.keyCode === 13) {
       //ENTER key
       // e.preventDefault();
-      alert(x)
       if (currentFocus > -1 && x) {
         x[currentFocus].click();
       } 
