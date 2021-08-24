@@ -133,19 +133,21 @@ function autocomplete(inp) {
         a.appendChild(b);
       }
 */
+    
     keys.unshift(this.value);
     len = keys.length;
+    
     for (var i = 0; i < len; i++) {
       var lab, id;
       if (labeled) {
         lab = keys[i];
         id = arr[lab];
-        alert(lab);
-        alert(id);
+       // alert(lab);
+       // alert(id);
       } else {
         lab = id = arr[i];
-        alert(lab);
-        alert("-----");
+       // alert(lab);
+       // alert("-----");
       }
       var labUC = lab.toUpperCase();
       var pos = -1;
