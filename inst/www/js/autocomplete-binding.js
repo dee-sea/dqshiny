@@ -158,6 +158,7 @@ function autocomplete(inp) {
         x[currentFocus].click();
       } else {
         $el.val($(ce.target).data("value")).trigger("change");
+      }
     } 
       
     if (x && x[currentFocus]) {
