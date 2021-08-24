@@ -107,6 +107,7 @@ function autocomplete(inp) {
       labeled = !arr.length;
 
     var onClick = function (ce) {
+      alert("ENTER");
       if($el.val($(ce.target).data("value"))) {
       alert($el.val($(ce.target).data("value")));
       $el.val($(ce.target).data("value")).trigger("change");
