@@ -107,7 +107,7 @@ function autocomplete(inp) {
       labeled = !arr.length;
 
     var onClick = function (ce) {
-      alert(JSON.stringify($el.val($(ce.target).data("value")).trigger("change")));
+      alert($(ce.target).data("value"));
       $el.val($(ce.target).data("value")).trigger("change");
     };
 /*------------
@@ -143,12 +143,12 @@ function autocomplete(inp) {
       if (labeled) {
         lab = keys[i];
         id = arr[lab];
-       // alert(lab);
-       // alert(id);
+        alert(lab);
+        alert(id);
       } else {
         lab = id = arr[i];
-       // alert(lab);
-       // alert("-----");
+        alert(lab);
+        alert("-----");
       }
       var labUC = lab.toUpperCase();
       var pos = -1;
