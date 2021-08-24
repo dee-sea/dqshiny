@@ -138,6 +138,7 @@ function autocomplete(inp) {
         if (maxCount && ++count >= maxCount) break;
       }
     }
+    $el.trigger("change");
   });
   $(inp).on("keydown.autocompleteBinding", function (e) {
     var x,
