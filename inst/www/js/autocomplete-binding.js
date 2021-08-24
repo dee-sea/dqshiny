@@ -155,6 +155,7 @@ function autocomplete(inp) {
     } else if (e.keyCode === 13) {
       //ENTER key
       // e.preventDefault();
+      alert(x)
       if (currentFocus > -1 && x) {
         x[currentFocus].click();
       } 
