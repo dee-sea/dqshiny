@@ -113,41 +113,14 @@ function autocomplete(inp) {
     var onClick = function (ce) {
       $el.val($(ce.target).data("value")).trigger("change");
     };
-/*------------
-      var lab, id;
-      if (labeled) {
-        lab = this.value;
-        id = arr[lab];
-      } else {
-        lab = id = this.value;
-      }
-      var labUC = lab.toUpperCase();
-      var pos = -1;
-      if (contains) pos = labUC.indexOf(valUC);
-      else if (labUC.substr(0, valLen) === valUC) pos = 0;
-      if (pos >= 0) {
-        var b = document.createElement("DIV");
-        b.innerHTML = lab.substr(0, pos);
-        b.innerHTML += "<strong>" + lab.substr(pos, valLen) + "</strong>";
-        b.innerHTML += lab.substr(pos + valLen);
-        if (labeled && !hideValues) b.innerHTML += "<small>" + id + "</small>";
-        $(b).data("value", lab);
-        $(b).on("click", onClick);
-        a.appendChild(b);
-      }
-*/
     
     for (var i = 0; i < len; i++) {
       var lab, id;
       if (labeled) {
         lab = keys[i];
         id = arr[lab];
-        //alert(lab);
-        //alert(id);
       } else {
         lab = id = arr[i];
-        //alert(lab);
-        //alert("-----");
       }
       var labUC = lab.toUpperCase();
       var pos = -1;
