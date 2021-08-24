@@ -116,8 +116,6 @@ function autocomplete(inp) {
       }
     };
 //-------------
-      alert(this.value);
-      alert(keys[1]);
       var lab, id;
       if (labeled) {
         lab = this.value;
