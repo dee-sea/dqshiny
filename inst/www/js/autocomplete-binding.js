@@ -107,7 +107,7 @@ function autocomplete(inp) {
       labeled = !arr.length;
 
     var onClick = function (ce) {
-      alert($(ce.target).data("value"))
+      alert($(ce.target).data("value"));
       $el.val($(ce.target).data("value")).trigger("change");
     };
 
@@ -144,7 +144,6 @@ function autocomplete(inp) {
     var x,
       parent = document.getElementById(this.id + "autocomplete-list");
     if (parent) x = parent.getElementsByTagName("div");
-    alert(e.keyCode);
     if (e.keyCode === 40) {
       //arrow DOWN
       currentFocus++;
