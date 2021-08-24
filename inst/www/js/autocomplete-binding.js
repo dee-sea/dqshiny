@@ -137,6 +137,7 @@ function autocomplete(inp) {
     keys.unshift(this.value);
     len = keys.length;
     
+    
     for (var i = 0; i < len; i++) {
       var lab, id;
       if (labeled) {
