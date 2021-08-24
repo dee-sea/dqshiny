@@ -133,9 +133,9 @@ function autocomplete(inp) {
         a.appendChild(b);
       }
 */
-    alert(JSONstringify(keys));
+    alert(JSON.stringify(keys));
     keys = ["aaa"].concat(keys);
-        alert(JSONstringify(keys));
+        alert(JSON.stringify(keys));
     len = keys.length;
     
     
