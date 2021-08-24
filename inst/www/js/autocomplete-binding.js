@@ -86,6 +86,8 @@ function autocomplete(inp) {
       hideValues = $el.data("hide"),
       contains = $el.data("contains"),
       val = this.value;
+    
+    $(el).trigger("change");
 
     closeAllLists();
     if (!val) return false;
@@ -138,7 +140,6 @@ function autocomplete(inp) {
         if (maxCount && ++count >= maxCount) break;
       }
     }
-    $el.trigger("change");
   });
   $(inp).on("keydown.autocompleteBinding", function (e) {
     var x,
