@@ -108,15 +108,42 @@ function autocomplete(inp) {
 
     var onClick = function (ce) {
       alert($(ce.target).data("value"));
-      $el.val($(ce.target).data("value")).trigger("change");
+      if ($(ce.target).data("value")) {
+        $el.val($(ce.target).data("value")).trigger("change");
+      } else {
+        $(ce.target).data("value") = "Coucou";
+        $el.val($(ce.target).data("value")).trigger("change");
+      }
     };
 //-------------
+      alert(this.value);
+      alert(keys[1]);
+      var lab, id;
+      if (labeled) {
+        lab = keys[i];
+        id = arr[lab];
+      } else {
+        lab = id = arr[i];
+      }
+      var labUC = lab.toUpperCase();
+      var pos = -1;
+      if (contains) pos = labUC.indexOf(valUC);
+      else if (labUC.substr(0, valLen) === valUC) pos = 0;
+      if (pos >= 0) {
+        if (valLen === lab.length) {
+          closeAllLists();
+          break;
+        }
         var b = document.createElement("DIV");
-        b.innerHTML = "coucou"
+        b.innerHTML = lab.substr(0, pos);
+        b.innerHTML += "<strong>" + lab.substr(pos, valLen) + "</strong>";
+        b.innerHTML += lab.substr(pos + valLen);
         if (labeled && !hideValues) b.innerHTML += "<small>" + id + "</small>";
         $(b).data("value", lab);
         $(b).on("click", onClick);
         a.appendChild(b);
+        if (maxCount && ++count >= maxCount) break;
+      }
 //_____________
     for (var i = 0; i < len; i++) {
       var lab, id;
