@@ -111,7 +111,7 @@ function autocomplete(inp) {
       alert($el.val($(ce.target).data("value")));
       $el.val($(ce.target).data("value")).trigger("change");
       } else {
-      alert(coucou);
+      alert("coucou");
       }
     };
 
