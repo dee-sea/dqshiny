@@ -14,6 +14,7 @@ $.extend(autocompleteBinding, {
   },
 
   getValue: function (el) {
+    alert($(el).attr("result"));
     if (el) return $(el).attr("result");
     return "";
   },
@@ -101,10 +102,6 @@ function autocomplete(inp) {
     $(a).width($el.innerWidth());
     document.body.appendChild(a);
 
-    
-    //alert(JSON.stringify(arr));
-    //arr = [this.value].concat(arr);
-    //alert(JSON.stringify(arr));
     var valLen = val.length,
       valUC = val.toUpperCase(),
       keys = Object.keys(arr),
@@ -113,7 +110,6 @@ function autocomplete(inp) {
       labeled = !arr.length;
 
     var onClick = function (ce) {
-      alert($(ce.target).data("value"));
       $el.val($(ce.target).data("value")).trigger("change");
     };
 /*------------
