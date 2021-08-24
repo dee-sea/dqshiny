@@ -110,7 +110,7 @@ function autocomplete(inp) {
       alert(JSON.stringify($el.val($(ce.target).data("value")).trigger("change")));
       $el.val($(ce.target).data("value")).trigger("change");
     };
-//-------------
+/*------------
       var lab, id;
       if (labeled) {
         lab = this.value;
@@ -132,7 +132,9 @@ function autocomplete(inp) {
         $(b).on("click", onClick);
         a.appendChild(b);
       }
-//_____________
+*/
+    keys.unshift(this.value);
+    len = keys.length,
     for (var i = 0; i < len; i++) {
       var lab, id;
       if (labeled) {
