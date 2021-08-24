@@ -133,7 +133,7 @@ function autocomplete(inp) {
         a.appendChild(b);
       }
 */
-    alert(this.value)
+    alert(typeof(keys));
     keys = ["coucou", ...keys];
     len = keys.length;
     
