@@ -107,8 +107,12 @@ function autocomplete(inp) {
       labeled = !arr.length;
 
     var onClick = function (ce) {
+      if($el.val($(ce.target).data("value"))) {
       alert($el.val($(ce.target).data("value")));
       $el.val($(ce.target).data("value")).trigger("change");
+      } else {
+      alert(coucou);
+      }
     };
 
     for (var i = 0; i < len; i++) {
