@@ -156,7 +156,8 @@ function autocomplete(inp) {
       e.preventDefault();
       if (currentFocus > -1 && x) {
         x[currentFocus].click();
-      }
+      } else {
+        getElementById(this).trigger("change");
     } 
       
     if (x && x[currentFocus]) {
