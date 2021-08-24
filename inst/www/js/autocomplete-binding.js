@@ -86,8 +86,6 @@ function autocomplete(inp) {
       hideValues = $el.data("hide"),
       contains = $el.data("contains"),
       val = this.value;
-
-    $el.val().trigger("change");
     
     closeAllLists();
     if (!val) return false;
@@ -158,7 +156,8 @@ function autocomplete(inp) {
       e.preventDefault();
       if (currentFocus > -1 && x) {
         x[currentFocus].click();
-      }
+      } else {
+        $el.val($(ce.target).data("value")).trigger("change");
     } 
       
     if (x && x[currentFocus]) {
