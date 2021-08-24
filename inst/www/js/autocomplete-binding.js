@@ -156,8 +156,9 @@ function autocomplete(inp) {
       e.preventDefault();
       if (currentFocus > -1 && x) {
         if(!x){
-          alert(1);
+          alert(x);
         } else {
+          alert(x);
           x[currentFocus].click();
         }
       } 
