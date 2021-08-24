@@ -176,7 +176,7 @@ function autocomplete(inp) {
     var x,
       parent = document.getElementById(this.id + "autocomplete-list");
     if (parent) x = parent.getElementsByTagName("div");
-/*    if (e.keyCode === 40) {
+    if (e.keyCode === 40) {
       //arrow DOWN
       currentFocus++;
       addActive(x);
