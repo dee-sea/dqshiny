@@ -143,7 +143,7 @@ function autocomplete(inp) {
     var x,
       parent = document.getElementById(this.id + "autocomplete-list");
     if (parent) x = parent.getElementsByTagName("div");
-    alert(e);
+    alert(e.keyCode);
     if (e.keyCode === 40) {
       //arrow DOWN
       currentFocus++;
@@ -156,12 +156,7 @@ function autocomplete(inp) {
       //ENTER key
       e.preventDefault();
       if (currentFocus > -1 && x) {
-        if(!x){
-          alert(x);
-        } else {
-          alert(x);
-          x[currentFocus].click();
-        }
+        x[currentFocus].click();
       } 
     } 
       
