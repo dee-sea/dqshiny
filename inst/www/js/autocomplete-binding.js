@@ -156,10 +156,10 @@ function autocomplete(inp) {
       if (contains) pos = labUC.indexOf(valUC);
       else if (labUC.substr(0, valLen) === valUC) pos = 0;
       if (pos >= 0) {
-        if (valLen === lab.length) {
-          closeAllLists();
-          break;
-        }
+        //if (valLen === lab.length) {
+        //  closeAllLists();
+        //  break;
+        //}
         var b = document.createElement("DIV");
         b.innerHTML = lab.substr(0, pos);
         b.innerHTML += "<strong>" + lab.substr(pos, valLen) + "</strong>";
