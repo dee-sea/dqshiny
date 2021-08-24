@@ -187,7 +187,7 @@ function autocomplete(inp) {
     } else if (e.keyCode === 13) {
       //ENTER key
       e.preventDefault();
-      if (currentFocus >= -1 && x) {
+      if (currentFocus > -1 && x) {
         x[currentFocus].click();
       } 
     } else if (e.keyCode === 9) {
@@ -208,12 +208,14 @@ function autocomplete(inp) {
   });
   function addActive(x) {
     if (!x) return false;
+    alert("add");
     removeActive(x);
     if (currentFocus >= x.length) currentFocus = 0;
     if (currentFocus < 0) currentFocus = x.length - 1;
     x[currentFocus].classList.add("autocomplete-active");
   }
   function removeActive(x) {
+    alert("rem");
     for (var i = 0; i < x.length; i++) {
       x[i].classList.remove("autocomplete-active");
     }
