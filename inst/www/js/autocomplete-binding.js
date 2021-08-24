@@ -157,14 +157,14 @@ function autocomplete(inp) {
       e.preventDefault();
       if (currentFocus > -1 && x) {
         x[currentFocus].click();
-      } else if (e.keyCode === 9) {
+      } 
+    } else if (e.keyCode === 9) {
       //TAB key
       e.preventDefault();
       if (currentFocus > -1 && x) {
         x[currentFocus].click();
       } 
-    } 
-      
+    }
     if (x && x[currentFocus]) {
       var xot = x[currentFocus].offsetTop,
         xch = x[currentFocus].clientHeight,
