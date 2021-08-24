@@ -100,9 +100,9 @@ function autocomplete(inp) {
     document.body.appendChild(a);
 
     
-    alert(JSON.stringify(arr));
-    arr = [this.value].concat(arr);
-    alert(JSON.stringify(arr));
+    //alert(JSON.stringify(arr));
+    //arr = [this.value].concat(arr);
+    //alert(JSON.stringify(arr));
     var valLen = val.length,
       valUC = val.toUpperCase(),
       keys = Object.keys(arr),
