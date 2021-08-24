@@ -120,10 +120,10 @@ function autocomplete(inp) {
       alert(keys[1]);
       var lab, id;
       if (labeled) {
-        lab = "coucou";
+        lab = this.value;
         id = arr[lab];
       } else {
-        lab = id = "coucou";
+        lab = id = this.value;
       }
       var labUC = lab.toUpperCase();
       var pos = -1;
