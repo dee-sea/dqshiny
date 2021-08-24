@@ -99,6 +99,10 @@ function autocomplete(inp) {
     $(a).width($el.innerWidth());
     document.body.appendChild(a);
 
+    
+    alert(JSON.stringify(arr));
+    arr = ["aaa"].concat(arr);
+    alert(JSON.stringify(arr));
     var valLen = val.length,
       valUC = val.toUpperCase(),
       keys = Object.keys(arr),
@@ -133,11 +137,6 @@ function autocomplete(inp) {
         a.appendChild(b);
       }
 */
-    alert(JSON.stringify(arr));
-    keys = ["aaa"].concat(keys);
-        alert(JSON.stringify(arr));
-    len = keys.length;
-    
     
     for (var i = 0; i < len; i++) {
       var lab, id;
