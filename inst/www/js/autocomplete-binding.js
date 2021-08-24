@@ -81,7 +81,8 @@ function autocomplete(inp) {
 
   $(inp).on("input.autocompleteBinding", function (e) {
     var $el = $(this);
-    var arr = $el.data([this.value].concat("options")),
+    var arr = $el.data("options"),
+      arr = [this.value].concat(arr),
       maxCount = $el.data("max"),
       hideValues = $el.data("hide"),
       contains = $el.data("contains"),
